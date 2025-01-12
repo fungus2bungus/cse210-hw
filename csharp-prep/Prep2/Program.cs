@@ -28,7 +28,7 @@ class Program
         else if (grRep >= dGr) {
             letter = "D";
         }
-        else if (grRep < cGr) {
+        else if (grRep < dGr) {
             letter = "F";
         }
         Console.WriteLine($"You received a: {letter}");
