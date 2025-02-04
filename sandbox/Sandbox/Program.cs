@@ -12,54 +12,19 @@ class Program
         } */
     static void Main(string[] args)
     {
-        /* Resume theResume = new Resume(); 
-        bool keepRunning = true;
+       Person p1 = new Person();
+       p1.SetName("Jerry");
+       p1.SetAge(23);
+       
+       p1.Display();
+       
+       string theName = p1.GetName();
+       Console.WriteLine($"The person's name was: {theName}");
+       
+    //    Person p2 = new Person("Mary", 18);
 
-        while (keepRunning)
-        {
-            DisplayMenu();
-
-            Console.Write("Enter choice: ");
-            string choice = Console.ReadLine();
-
-            if (choice == "1")
-            {
-                // add a new job
-                Console.Write("What is the name of the company? ");
-                string company = Console.ReadLine();
-                
-                Console.Write("What is the position? ");
-                string position = Console.ReadLine();
-                
-                Job newJob = new Job();
-                newJob._company = company;
-                newJob._jobTitle= position;
-                newJob._startYear = 2015;
-                newJob._endYear = 2023;
-                Console.Write($"{newJob}");
-
-                theResume._jobs.Add(newJob);
-
-            }
-            else if (choice == "2")
-            {
-                // Display the resume
-                Console.WriteLine($"{theResume}");
-            }
-            else if (choice == "3")
-            {
-                // Quit
-                keepRunning = false;
-            }
-            else
-            {
-                // unexpected input
-                Console.WriteLine("Sorry, that is not valid. Please try again.");
-            }
-
-        } */
-
-/*         // int name = "John";
+        
+/* 
 
         Movie favoriteMovie = new();
         {
