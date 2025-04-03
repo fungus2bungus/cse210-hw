@@ -1,0 +1,12 @@
+This is a test Journal thing. It will have multiple lines and a lot of text to work through. This is to make sure everything can be properly stored.
+
+This space here simulate multiple entries in the same journal.
+
+
+Author
+Date
+Prompt
+Response
+
+Date Prompt
+Response

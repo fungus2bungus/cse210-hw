@@ -1,32 +1,42 @@
 
+using System.Linq.Expressions;
+
 public class Entry
 {
     public string _author;
-    public string _date;
+    public string _date = DateTime.Now.ToString("dd/MM/yyyy");
     public string _prompt;
     public string _response;
+
+    public Entry(string author, string prompt)
+    {
+        _author = author;
+        _prompt = prompt;
+    }
     
     public void UserInput()
     {
-        string m = Console.ReadLine();
-
-        while(m != "5")
-            {
-                if(m == "1")
-                {
-                    Console.WriteLine($"Write entry selected");
-                }
-                            
-            }
-
+        _response = Console.ReadLine();
+    }
+    
+    private void DisplayDate()
+    {
+        DateTime currentDate = DateTime.Now;
+        // Console.Write(currentDate.ToString("dd-MM-yyyy"));
+        _date = currentDate.ToString("dd-MM-yyyy");
+        // return currentDate.ToString("dd-MM-yyyy");
     }
 
-    public void Display()
+    public string Display()
     {
-        Console.WriteLine($"1. Write a new entry");
-        Console.WriteLine($"2. Display the journal");
-        Console.WriteLine($"3. Save the journal to a file");
-        Console.WriteLine($"4. Load journal from file");
-        Console.Write($"Select action: ");
+        // Console.WriteLine($"Author: {_author} Date: {_date} Prompt: {_prompt}");
+        // Console.WriteLine($"Date: {_date}");
+        // Console.WriteLine("");
+        // DisplayDate();
+        // Console.WriteLine(_prompt);
+        // Console.WriteLine("");
+        // Console.WriteLine($"Response: {_response}");
+        return $"Author: {_author} - Date: {_date} - Prompt: {_prompt}";
+
     }
 }
