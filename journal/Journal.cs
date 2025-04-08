@@ -13,6 +13,7 @@ public class Journal
     
     public void FileRead()
     {
+        // I have no idea what this was supposed to do
         string fileName = "promptlist.md";
         string[] lines = File.ReadAllLines(fileName);
 
@@ -30,8 +31,8 @@ public class Journal
     public void DisplayAllEntries()
     {
         //Entry.Display();
-       // Needs to call Entry.Display and then iterate through each 
-       // 
+        // Needs to call Entry.Display and then iterate through each 
+        
        int cn = 0;
     //    string jtext = "";
     //    foreach(Entry en in _entries)

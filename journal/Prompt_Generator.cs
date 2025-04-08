@@ -22,6 +22,7 @@ public class Prompt
 
         return lines[randindex];
 
+        // I don't remember what this was supposed to do
         /* foreach (string ld in lines)
         {
             Console.WriteLine($"{ld}");:W

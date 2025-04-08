@@ -14,21 +14,18 @@ class Program
     }
     static void Main(string[] args)
     {
-        //here be where the code be
-
-        //first display options/prompt
-        // entry1.Display();
         // set up for author
         // Console.Write($"Input Author Name: ");
-        // instead have this just assigned to a global(local?) variable
         // entry1._author = Console.ReadLine();
         // string author = Console.ReadLine();
+        // 
+        // Initially I had it so you could set up an author, but it became cumbersome
         string author = "Conner";
         Journal journal1 = new Journal();
 
         List<string> entries = new List<string>();
+        // I don't remember why I made this list
         Prompt scorp = new Prompt();
-        // string textcontent = "";
         string m = "";
 
         while(m != "5")
@@ -37,10 +34,7 @@ class Program
                 if(m == "1")
                 {
                     Entry entry1 = new Entry(author, scorp.PromptGenerator());
-                    // entry1._author = author;
-                    // Console.WriteLine($"Write entry selected");
-                    // entry1._prompt = scorp.PromptGenerator();
-                    // entry1._prompt = Console.ReadLine();
+                    // used to be everything indiviually assigned, until I decided to switch to a constructor
                     Console.Write("> ");
                     entry1.UserInput();
                     // entries.Add(entry1._response);
@@ -53,26 +47,24 @@ class Program
                 {
                     // dispay method from Journal
                     journal1.DisplayAllEntries();
-
-                  /*   foreach(string en in entries)
-                    {
-                        Console.WriteLine("");
-                        Console.WriteLine($"{en}");
-                    } */
                 }
                 else if(m =="3")
                 {
-                    // TODO: save the entries to the journal
+                    // DONE save the entries to the journal
                     // okay, maybe I should have it so that it stores the whole journal to a file
                     Console.Write("Choose a filename: ");
                     string fpath = @"C:\Users\Cortex\Documents\cdporje\cse210-hw\journal\jornels\" + Console.ReadLine() + ".txt";
+                    // made it so it wouldn't have to specify filetype, just the name(beacuse typos suck)
                     
                     // journal1.UpdateTextEntries();
+                    // initially this existed to update the text content, but didn't really work
                     string jortext = "";
                     // File.WriteAllText(fpath, author);
+                    // initially was supposed to get just set up a file with the author as the first line,
                     
                     foreach(string sp in journal1._textEntries)
                     {
+                        // I don't think this does anything anymore
                         // Console.WriteLine("");
                         // Console.WriteLine(sp);
                         // Console.WriteLine(journal1._textEntries.Count());
@@ -104,23 +96,12 @@ class Program
                     // so I need to re-add everything to each entry, then add that to entries
                     // I just need to focus on the strings, not the classes... ugh
 
-
-                    // Console.WriteLine("");
-                    // Console.WriteLine(content);
-                    // Console.WriteLine(jorcont);
                 }
                 Console.WriteLine("");
                 MenuDisplay();
 
                 m = Console.ReadLine();
             }
-
-        // Journal journal1 = new Journal();
-        // {
-            //entries from entry?
-            // journal1._entries = new List<string> {"man", "bam"};
-        // }
-        journal1.FileRead();
     }
     
 }
