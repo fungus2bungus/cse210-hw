@@ -66,9 +66,6 @@ class Program
             m = Console.ReadLine();
 
         }
-        
-
-
         // while loop to run one
 /*         Listing test1 = new Listing();
 
@@ -76,6 +73,6 @@ class Program
         {
             Console.WriteLine(test1.GetRandomPrompt());
         } */
-        
+    // this here was kinda just to test the prompt generators 
     }
 }

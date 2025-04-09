@@ -8,11 +8,10 @@ class Listing : Activity
 
     private List<string> _prompts = new List<string>();
     // i don't remember why I need a list of the prompts? maybe it would've been easier than using a file?
-    // does stuff
+    // yeah it was, I'm still leaving this in to show my thought process
 
     // private function of GetPromptList() that returns a list 
     // makes a list Add() s a bunch of prompts and returns the list
-    // 
     public string GetRandomPrompt()
     {
         // random index thing

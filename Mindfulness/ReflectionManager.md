@@ -25,6 +25,7 @@ Who are some of your personal heroes?
 
 
 Breathing
+thought this'd work but ended up being too complicated... specifically for ShowIntro(), but it was a little too much
 Welcome to the Breathing Activity
 
 This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.

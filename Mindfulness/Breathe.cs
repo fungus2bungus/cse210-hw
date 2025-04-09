@@ -13,13 +13,11 @@ class Breathe : Activity
         DateTime futureTime = startTime.AddSeconds(_time);
         DateTime currentTime = DateTime.Now;
 
-
         Console.WriteLine("");
         // okay, this all works, but now I need to somehow have the loops increase in time...
-        // TODO: Increment breathe time with iterations
-        // int k = 2;
-        // int g = 3;
-        int cn = 0;
+        // DONE TODO: Increment breathe time with iterations
+        int cn = 0; // this is to make sure that the faster iteration runs at least once
+        // so I set it up in this weird way so that both iteration of a fast and slow version would always work, where it would always start and end with the fast one
         while(currentTime < futureTime)
         {
             currentTime = DateTime.Now;
@@ -71,30 +69,5 @@ class Breathe : Activity
             Console.WriteLine("");
             cn++;
         }
-        
-        // Thread.Sleep(_time*500);
     }
-    
-    private string filepath = @"C:\Users\Cortex\Documents\cdporje\cse210-hw\Mindfulness\ReflectionManager.md";
-
-    private List<string> _prompt = new List<string>(File.ReadAllLines(@"C:\Users\Cortex\Documents\cdporje\cse210-hw\Mindfulness\ReflectionManager.md"));
-    
-    // tried to be fancy, kinda unecessary
-    public void DisplayStart()
-    {
-        int[] lined = {27, 28, 29, 30};
-        // List<int> lined = new List<int>(29, );
-        foreach(int i in lined)
-        {
-            if (i >= 0 && i < _prompt.Count())
-            {
-                Console.WriteLine($"{_prompt[i]}");
-            }
-        }
-        Console.Write($"{_prompt[31]}");
-    }
-    
-
-    
-
 }

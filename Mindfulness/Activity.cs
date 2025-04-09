@@ -10,12 +10,9 @@ class Activity
         
     }
     
-    // does stuff
-    
     public void ShowSpinner()
     {
         // does annimation for the throbber
-        // maybe only work on this once everything else is done
         for(int i = 0; i < 2; i++)
         {
             Console.Write("-");
@@ -31,7 +28,6 @@ class Activity
             Thread.Sleep(500);
             Console.Write("\b \b");
         }
-        
     }
     
     // DONE TODO: ShowIntro() I might need some paramaters for this...
@@ -43,7 +39,6 @@ class Activity
         Console.WriteLine($"{_startingmsg}");
         Console.WriteLine($"");
         Console.Write($"How long, in seconds, would you like this session? ");
-        
     }
     
     public void GetTimer()
@@ -57,7 +52,6 @@ class Activity
         Console.Clear();
         Console.WriteLine("Get ready...");
         ShowSpinner();
-
     }
     
     public void ShowEnding()
@@ -65,7 +59,7 @@ class Activity
         Console.WriteLine("Well Done!!");
         ShowSpinner();
         Console.WriteLine("");
-        Console.WriteLine($"You have completed another {_time} seconds of the Breathing Activity.");
+        Console.WriteLine($"You have completed another {_time} seconds of the {_name} Activity.");
         ShowSpinner();
     }
 }
