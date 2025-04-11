@@ -12,6 +12,7 @@ class Program
         } */
     static void Main(string[] args)
     {
+       // TODO start book thing? 
        Person p1 = new Person();
        p1.SetName("Jerry");
        p1.SetAge(23);
