@@ -1,5 +1,6 @@
 using System;
 
+// So it pretty much works, I just can't get it to check for if something is hidden or not correctly, don't know if that's something I can fix
 public class Program
 {
     static void Main()
